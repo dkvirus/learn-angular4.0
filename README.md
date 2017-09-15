@@ -5,7 +5,7 @@ Learn Angular@4.0
 - 下载代码
 
 ```
-$ git clone git@github.com:dkvirus/dva-admin-web.git
+$ git clone git@github.com:dkvirus/learn-angular4.0.git
 ```
 
 - 安装依赖包
