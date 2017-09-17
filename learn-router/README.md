@@ -15,7 +15,7 @@ $ git clone git@github.com:dkvirus/learn-angular4.0.git
 learn-angular4.0 项目下每个子目录都是一个独立的工程，如 learn-router 目录就是学习 Angular4.0 router 部分的 demo 示例。
 
 ```
-$ cd learn-angular/learn-router
+$ cd learn-angular4.0/learn-router
 ```
 
 - 安装依赖包
