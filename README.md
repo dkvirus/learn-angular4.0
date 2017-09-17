@@ -41,6 +41,6 @@ learn-angular 4.0 下每个子目录都是一个独立的工程，根据需要�
   - 第一节：Angular 发展历史
   - 第二节：安装环境
   - 第三节：TypeScript 语法介绍
-  - 第四节：组件 —— learn-component
+  - [第四节：组件 —— learn-component](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-component)
   - [第五节：路由 —— learn-router](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-router)
   
