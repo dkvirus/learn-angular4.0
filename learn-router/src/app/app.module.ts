@@ -12,10 +12,6 @@ import { AssistComponent } from './assist/assist.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ChildrenOneComponent } from './children-one/children-one.component';
 import { ChildrenTwoComponent } from './children-two/children-two.component';
-import { ParamComponent } from './param/param.component';
-import { PathComponent } from './param/path/path.component';
-import { QueryComponent } from './param/query/query.component';
-import { SubscribeComponent } from './param/subscribe/subscribe.component';
 
 @NgModule({
   declarations: [
