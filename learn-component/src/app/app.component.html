@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink] = "['/home']">主页</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a [routerLink] = "['/base-concept']">基础概念</a></li>
+      <li><a [routerLink] = "['/interactions']">组件交互</a></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+

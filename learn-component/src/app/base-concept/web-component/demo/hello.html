@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<template id="hello-angular">
+	<style type="text/css">
+		h1 {color: red}
+	</style>
+	<h1>Hello</h1>
+</template>
+<script type="text/javascript">
+	//指向导入文档
+	var indexDoc = document;
+
+	//指向被导入文档
+	var helloDoc = (indexDoc._currentScript || indexDoc.currentScript).ownerDocument;
+
+	//获得模板
+	var tmpl = helloDoc.querySelector('#hello-angular');
+
+	//创建一个新元素的原型，继承自 HTMLElement
+	var HelloProto = Object.create(HTMLElement.prototype);
+
+	//设置Shadow DOM并将模板的内容克隆进去
+	HelloProto.createdCallback = function() {
+		var root = this.createShadowRoot();
+		root.appendChild(indexDoc.importNode(tmpl.content, true));
+	}
+
+	var Hello = indexDoc.registerElement('hello-angular',{
+		prototype: HelloProto
+	});
+</script>
+</body>
+</html>
+
+
+shadow DOM    Web components
