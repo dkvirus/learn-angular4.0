@@ -34,4 +34,8 @@ $ ng server
 
 如端口号被占用，可设置其它端口： `$ ng server --port 4201`
 
+## 页面展示
+
+![首页](./src/assets/images/page1.png)
+
 
