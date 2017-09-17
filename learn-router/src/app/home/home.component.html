@@ -1,0 +1,46 @@
+<h3>
+  Hello，我是主页
+</h3>
+
+<hr>
+<b>一、路由定义</b>
+<p>
+  在Web 开发中，路由的概念由来已久，简而言之，就是利用URL的唯一性来指定特定的事物，这个事物可以是文件、状态、数据，等等。 服务器端路由早已有之，随着近几年REST理念的流行，为更多的人接受和使用。而浏览器客户端路由，则是随着单页应用 (SPA)的兴起，才被越来越多的前端框架所实现。在Angular中，页面由组件构成，因此URL和页面的对应关系实质上就是URL和组件的对应关系
+</p>
+<p>上面那些天书换种简单的说法就是：浏览器中地址栏地址变化，页面内容也跟着相应变化。这种操作就叫做路由。</p>
+<span>延伸阅读：</span><a href="http://www.cnblogs.com/wuyun-blog/p/5706703.html">URL和URI的区别</a> &nbsp;&nbsp;
+<a href="http://www.ruanyifeng.com/blog/2011/09/restful ">restFul架构风格</a>
+
+<hr>
+<b>二、路由策略</b>
+<div>
+  路由策略决定Angular将使用URL的哪一部分来和路由配置项的path属性进行匹配。Angular提供了PathLocationStrategy和HashLocationStrategy两种策略。以首页为例：
+<ul>
+  <li>Path（Angular默认）策略时：http://localhost:4200/home</li>
+  <li>Hash策略时：http://localhost:4200/#/home</li>
+</ul>
+</div>
+
+<hr>
+<b>三、Angular 中如何写路由</b>
+<ul>
+  <li>
+    1. 配置路由配置项
+    <p>
+      根路由在 <b>app-routing.module.ts</b> 中进行配置。类似：{{ "{ path: 'home', component: HomeComponent }" }}
+    </p>
+    <img src="../../assets/images/配置路由表.png" alt="配置路由表" height="400">
+  </li>
+  <li>2. 修改指令（代码）的参数</li>
+    <p>
+      指令的作用是相当于 a 标签，点击它才会跳转相应的页面。
+    </p>
+    <img src="../../assets/images/指令占位符.png" alt="指令占位符">
+  <li>3. 占位符</li>
+    <p>
+      占位符在上图中已经标明，作用是先占个位置，点击指令的之后，会在路由配置项中找到相应的组件，组件的内容就放到这个占位符的位置这里。
+    </p>
+  <li>4. 接收数据</li>
+    <p>如果路由跳转时需要携带一些参数，在这一步操作。</p>
+</ul>
+

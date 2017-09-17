@@ -1,0 +1,24 @@
+<h3>
+  参数传递 <small>（对应代码中的 app/param 目录）</small>
+</h3>
+
+<hr>
+<b>一、什么是参数传递？</b> <br><br>
+<div style="background-color: antiquewhite">
+  从一个路由跳转到另一个路由，通常需要在路由中携带一些参数，下面就介绍三种通过路由传递参数的方式。
+</div> <br>
+
+<hr>
+<b>二、参数传递种类：</b> <br><br>
+<div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation"><a [routerLink] = "['path']">path 方式</a></li>
+      <li role="presentation"><a [routerLink] = "['query']">query 方式</a></li>
+      <li role="presentation"><a [routerLink] = "['subscribe']">subscribe 方式</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-7 col-md-7 col-lg-7" style="background-color: aquamarine; min-height: 400px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<h3>
+  子路由<small>（对应代码中的 app/children 目录）</small>
+</h3>
+
+<hr>
+<b>一、什么是子路由？</b>
+<div style="background-color: antiquewhite">
+  我是子路由组件里面的内容。蓝色 div 里的内容为 <b>子路由孩子菜单里面的内容，可认为是将其它组件的内容嵌套到当前页面中</b> 。<br>
+  点击左下方的两个链接，可以切换不同子路由孩子菜单的内容，在右下方可以看到内容的变化。
+</div> <br>
+
+<div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation"><a [routerLink] = "['./one']">子路由孩子菜单1</a></li>
+      <li role="presentation"><a [routerLink] = "['./two']">子菜单孩子菜单2</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-7 col-md-7 col-lg-7" style="background-color: aquamarine; height: 400px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<hr>
+<b>二、使用方法：</b>
+<p>
+  <br>
+  1. 修改路由表 <br>
+  <img src="../../assets/images/子路由.png" alt="子路由" height="400"> <br><br>
+  2. 写路由指令和占位符 <br>
+  <img src="../../assets/images/子路由2.png" alt="子路由2" height="400">
+</p>
+
+<hr>
+<b>三、注意事项：</b>
+<p>
+  父路由中的 path 属性是绝对路径，子路由的 path 属性是相对路径，所以子路由 [routerLink] = "['./one']" 中为 './one' 而不是 'one'。
+</p>

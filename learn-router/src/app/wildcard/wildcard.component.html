@@ -1,0 +1,21 @@
+<h3>
+  通配符路由 <small>（对应代码中的 app/wildcard 目录）</small>
+</h3>
+
+<hr>
+<b>一、什么是通配符路由？</b> <br>
+<img src="../../assets/images/路由表.png" alt="路由表" height="300"> <br><br>
+<p>
+  上述为项目中的路由表，在地址栏中任意输入 <b>上述路由表中的地址</b> ，都可以跳转到相应的页面。<br>
+  使用场景最多的一项是：<b>当输入除路由表以外的其它地址时，我们让页面跳转到 NotFound 页面以提示用户没有该页面</b>。
+</p>
+
+<hr>
+<b>二、Not Found Page 页面效果：</b> <br>
+<img src="../../assets/images/NotFound.png" alt="NotFound" height="400"> <br>
+
+<hr>
+<b>三、注意事项：</b>
+<p>
+  路由表中通配符路由一定要写在最后一行，只有当其它路由 path 属性都没有找到时，才会验证通配符路由。
+</p>

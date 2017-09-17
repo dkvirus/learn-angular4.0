@@ -1,0 +1,28 @@
+<h3>
+  路由守卫 <small>（对应代码中的 app/guard 目录）</small>
+</h3>
+
+<blockquote>本例中应用了子路由和懒加载路由的写法。</blockquote>
+<hr>
+<b>一、什么是路由守卫？</b> <br><br>
+<div style="background-color: antiquewhite">
+  前面介绍了六种路由，路由守卫可以看成是对前面路由的一种拦截。<br>
+  为什么会有五种路由守卫，因为每种路由守卫拦截的对象并不相同。如：激活守卫只拦截父路由，而子路由激活只拦截子路由，模块加载路由只拦截懒加载路由。
+</div> <br>
+
+<hr>
+<b>二、路由守卫种类：</b>
+<div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation"><a [routerLink] = "['canActivate']">激活守卫</a></li>
+      <li role="presentation"><a [routerLink] = "['canActivateChild']">子路由激活</a></li>
+      <li role="presentation"><a [routerLink] = "['canDeactivate']">反激活守卫</a></li>
+      <li role="presentation"><a [routerLink] = "['resolve']">数据预加载守卫</a></li>
+      <li role="presentation"><a [routerLink] = "['canLoad']">模块加载守卫</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-7 col-md-7 col-lg-7" style="background-color: aquamarine; min-height: 400px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

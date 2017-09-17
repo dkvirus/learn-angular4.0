@@ -1,0 +1,30 @@
+<h3>
+  懒加载路由
+  <small>（对应代码中的 app/async/async 目录）</small>
+</h3>
+
+<hr>
+<b>一、什么是懒加载路由？</b> <br>
+<img src="../../../assets/images/加载路由.png" alt="加载路由" height="400">
+<p>
+  <br>
+  1. 启动项目时，上图中使用 import 语句导入的 Component 组件程序都会加载一遍；<br>
+  2. 这带来的问题是，如果组件很多很多，在启动程序时就会花很多时间在加载上面，那么首页打开的时间就会显得很卡，对于用户来说很不友好；<br>
+  3. 我们的愿景是：用到哪个组件时才去加载对应组件。在本例中就是点击“懒加载路由”时才去加载对应的组件；<br>
+  4. 代码层面的改变就是 "懒加载路由" 的组件并没有使用 import 语句导入 AsyncComponent 组件，而是在点击选项卡时根据 <b>'app/async/async.module#AsyncModule'</b> 路径去临时加载。<br>
+  <b>注：如果首页打开速度慢，推荐使用懒加载路由的形式。</b>
+</p>
+
+<hr>
+<b>二、使用方法：</b> <br><br>
+1. 写组件 <br>
+组件代码参考：<b>app/async 目录</b>。<br><br>
+2. 配置路由表 <br>
+不使用 component 属性引入组件，而是使用 loadChildren 属性，属性值为组件的绝对路径，# 后面跟要异步加载的模块名，具体写法可参考：<b>app-routing.module.ts 文件</b>。<br>
+{{ " { path: 'async', loadChildren: 'app/async/async.module#AsyncModule' }," }}
+
+<hr>
+<b>三、注意事项：</b>
+<p>
+  使用懒加载路由时 <b>app.module.ts</b> 中也不需要 import 对应的组件，从一定程度上说节约了首页性能。
+</p>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink] = "['/home']">主页</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a [routerLink] = "['/normal']">普通路由</a></li>
+      <li><a [routerLink] = "['/redirect']">重定向路由</a></li>
+      <li><a [routerLink] = "['/wildcard']">通配符路由</a></li>
+      <li><a [routerLink] = "['/children']">子路由</a></li>
+      <li><a [routerLink] = "['/async']">懒加载路由</a></li>
+      <li><a [routerLink] = "[{outlets: {aux: ['assist']}}]">辅助路由</a></li>
+      <li><a [routerLink] = "['/guard']">路由守卫</a></li>
+      <li><a [routerLink] = "['/param']">参数传递</a></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+<!--用于辅助路由测试使用-->
+<router-outlet name="aux"></router-outlet>

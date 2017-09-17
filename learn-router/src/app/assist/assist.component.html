@@ -1,0 +1,21 @@
+<div class="chat-wrap">
+  <div>
+    <label>我是辅助路由制作出来的对话框</label>
+    <span (click)="closeChat()" class="glyphicon glyphicon-remove pull-right"></span>
+  </div>
+  <textarea placeholder="请输入聊天内容">
+    这个对话框是点击 "辅助路由" 产生的。（辅助路由对应代码中的 app/assist 目录）
+
+    辅助路由的一大用处就是可以做一些通用处理，此时你点击其它选项卡会发现这个对话框并不会消失。
+
+    如果你想让它消失，请点击右上角的 ×。
+
+    如果子路由中用到了重定向，那么 "辅助路由" 可能会失效。
+
+    { path: 'children', component: ChildrenComponent, children: [
+       //  下面注释这行代码就是子路由用到重定向的例子
+       // { path: '', redirectTo: '/children/one', pathMatch: 'full' },
+       { path: '', component: ChildrenOneComponent },
+     ] },
+  </textarea>
+</div>
