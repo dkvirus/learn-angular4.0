@@ -43,4 +43,7 @@ learn-angular 4.0 下每个子目录都是一个独立的工程，根据需要�
   - 第三节：TypeScript 语法介绍
   - [第四节：组件 —— learn-component](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-component)
   - [第五节：路由 —— learn-router](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-router)
+  - [第六节：模板 —— learn-template](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-template)
+  - [第七节：指令 —— learn-directive](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-directive)
+  - [第八节：依赖注入 —— learn-di](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-di)
   
