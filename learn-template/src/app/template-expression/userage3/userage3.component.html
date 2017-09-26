@@ -1,0 +1,44 @@
+<h3>
+  模板表达式上下文 <small>（代码对应目录为：app/template-expression/userage3）</small>
+</h3>
+
+<br><hr>
+<p>
+  <b>定义</b><br>
+  表达式上下文的意思是表达式里可以用到哪些属性和方法，得有一个明确的认知，不能瞎猜。主要有三种上下文。
+</p>
+
+<br><br>
+<p>
+  <b>三种上下文</b> <br>
+  1. 组件实例 <br>
+  表达式可以使用宿主组件中的属性和方法。 <br>
+  {{ testAttr }} <br>
+  {{ testMethod('i am someone method') }}  &nbsp;&nbsp; （如果调用方法，方法应该有返回值，否则不显示） <br><br>
+
+  2. 模板输入变量 <br>
+  <textarea name="" cols="100" rows="2" style="border-style: none;background-color: aquamarine;" disabled>
+    <div *ngFor="let hero of heroes">{{ '\{\{hero.name\}\}' }}</div>
+  </textarea> <br>
+  上述例子中的 hero 变量就是模板输入变量。根据 heroes 数组每次都会变化。 <br><br>
+
+  3. 模板引用变量 <br>
+  # 号可以获取当前标签的控制权，赋值给一个变量，通过该变量可以得到当前标签的属性和方法。适用于自己获取自己的情况。 <br>
+  但是只能获取值，不能修改。
+</p>
+
+<br><br>
+<p>
+  <b>优先级</b> <br>
+  当变量名称重复的时候，需要按优先级来区分变量取什么值。 <br>
+  模板输入变量 > 模板引用变量 > 组件实例
+</p>
+
+<b>下面代码为测试模板引用变量：（看效果请取消注释）</b>
+<hr>
+<hr>
+<hr>
+<!--<userage2 #userage2></userage2>
+{{userage2.name}} <br>
+{{userage2.age}} <br>
+{{userage2.eat()}} <br>-->

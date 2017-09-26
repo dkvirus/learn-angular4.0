@@ -1,0 +1,47 @@
+<h3>
+  模板表达式定义 <small>（代码对应目录为：app/template-expression/userage2）</small>
+</h3>
+
+<br>
+<hr>
+<p>
+  <b>定义</b> <br>
+  <textarea name="" cols="100" rows="3" style="border-style: none;background-color: aquamarine;" disabled>
+    前面介绍过插值表达式，如：{{ "\{\{ 1+1 \}\}" }}；
+    内部的  1 + 1 就是模板表达式。
+  </textarea>
+</p> <br>
+
+<p>
+  <b>应用场景</b> <br>
+  <textarea name="" cols="100" rows="5" style="border-style: none;background-color: aquamarine;" disabled>
+    1. 应用在插值表达式中；
+      如：{{ "\{\{ 1+1 \}\}" }}
+    2. 应用在属性绑定中。
+      在属性绑定中的模板表达式，它出现在 = 右侧的引号中，就像这样：[property]="expression"。
+  </textarea>
+</p>
+
+<p>
+  <b>禁用写法</b> <br>
+  1. 赋值 (=, +=, -=, ...) <br>
+  2. new运算符 <br>
+  3. 使用;或,的链式表达式 <br>
+  4. 自增或自减操作符 (++和--) <br>
+  5. 位运算符 & 或 | <br>
+  6. 不能引用全局命名变量，如：window 、 document <br>
+  7. 不能调用 console.log 、 Math.max 等全局函数。
+</p>
+
+<br><br>
+<p>
+  <b>可用写法</b> <br>
+  1. 管道 | <br>
+    使用前需要在 .module.ts 文件引入外部模块 {{"import { CommonModule } from '@angular/common';"}} <br>
+    测试： {{ today | date }} <br>
+  2. 安全导航操作符  ?. <br>
+    在之前的写法一般是 person && person.name ，有了安全导航操作符之后的写法变成 person?.name <br>
+    测试哪怕 person 为空，person.name 只会不显示而已，并不会报错。因此作用并不大。<br>
+  3. 非空断言操作符  !. <br>
+  4. 逻辑运算符：&& 和 || 和 ! <br>
+</p>

@@ -1,0 +1,59 @@
+
+<!-- 常用属性型指令 -->
+<div [ngClass]="setClasses()">含有红色类的文字</div>
+<div [ngStyle]="setStyle()">16号粗体文字</div>
+<div class="form-group">
+  <label for="myInput">{{ content }}</label>
+  <input [(ngModel)]="content" class="form-control" id="myInput">
+</div>
+
+<hr>
+<!-- 常用结构型指令 -->
+<!--
+<div *ngIf="false">ngIf为true所以你能看见我</div>
+<div *ngFor="let text of texts; let i=index; trackBy: trackByText()">
+  {{i + 1}} - {{ text }}
+</div>
+<div [ngSwitch]="contactName">
+  <span *ngSwitchCase="'Bill'">比尔盖茨</span>
+  <span *ngSwitchCase="'Mark'">马克·扎克伯格</span>
+  <span *ngSwitchDefault>Derry</span>
+</div>
+-->
+<hr>
+<!-- 自定义属性型指令 -->
+<!--
+<div>
+  <input type="radio" name="colors" (click)="color='green'">绿色
+  <input type="radio" name="colors" (click)="color='yellow'">黄色
+  <input type="radio" name="colors" (click)="color='red'">红色
+</div>
+<div [ngStyle]="setStyle()" [myColor]="color" author="Derry">欢迎来到：动脑学院</div>
+-->
+
+<hr>
+<!-- 自定义结构型指令 -->
+<!--<div *myUnIf="false">
+  <p>我是自定义unIF的内容</p>
+</div>-->
+
+<hr>
+<!-- 模板标签 -->
+
+<!--<div *ngIf="true">{{ content }}</div>
+
+<div template="ngIf true">{{ content }}</div>
+
+<ng-template [ngIf]="true">
+  <div> {{ content }}</div>
+</ng-template>-->
+
+<!--
+
+<div *ngFor="let text of texts; let i=index">aaa</div>
+
+<div template="ngFor let text of texts; let i=index;">bbb</div>
+
+<ng-template ngFor let-text [ngForOf]="texts" let-i="index"><div>ccc</div></ng-template>
+-->
+

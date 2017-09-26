@@ -1,0 +1,38 @@
+<h3>
+  模板语句定义 <small>（代码对应目录为：app/template-statement/userage1）</small>
+</h3>
+
+<br><hr>
+<p>
+  <b>定义</b><br>
+    模板语句用来响应由绑定目标（如 HTML 元素、组件或指令）触发的事件。 模板语句将在事件绑定一节看到，它出现在=号右侧的引号中，就像这样：(event)="statement"。
+</p>
+
+<br>
+<p>
+  <b>示例</b><br>
+  <textarea name="" cols="100" rows="2" style="border-style: none;background-color: aquamarine;" disabled>
+    <button (click)="deleteHero()">Delete hero</button>
+  </textarea><br>
+  上述示例中等号（=）右侧的 deleteHero() 就是模板语句。等号（=）左侧为事件名称，用小括弧包裹。 <br>
+  click 事件是由子组件 button 提供的方法；deleteHero 由当前调用 button 的组件提供的方法。
+</p>
+
+<p>
+  <b>禁用写法</b> <br>
+  1. 赋值 (+=, -=, ...)，不包括赋值符号了 =  <br>
+  2. new运算符 <br>
+  3. 自增或自减操作符 (++和--) <br>
+  4. 位运算符 & 或 | <br>
+  5. 不能引用全局命名变量，如：window 、 document <br>
+  6. 不能用管道、?. 和 !.
+</p>
+
+<br><br>
+<p>
+  <b>可用写法</b> <br>
+  1. 赋值 = <br>
+  2. ; 和 ,
+</p>
+
+

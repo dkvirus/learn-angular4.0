@@ -1,0 +1,15 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink] = "['/home']">主页</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a [routerLink] = "['/template-expression']">模板表达式</a></li>
+      <li><a [routerLink] = "['/template-statement']">模板语句</a></li>
+      <li><a [routerLink] = "['/test']">测试</a></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
