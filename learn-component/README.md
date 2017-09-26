@@ -1,28 +1,39 @@
-# LearnComponent
+# learn-component
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.0.
+> 本工程为学习 Anguar4.0 component 部分的学习 demo。建议学习方式：以官网知识为主，本 demo 介绍了组件相关概念、如何创建 Angular 组件以及组件之间的四种交互方式。
 
-## Development server
+## 快速开始
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- 下载项目
 
-## Code scaffolding
+```
+$ git clone git@github.com:dkvirus/learn-angular4.0.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 切换到 learn-component 项目目录
 
-## Build
+learn-angular4.0 项目下每个子目录都是一个独立的工程，如 learn-component 目录就是学习 Angular4.0 component 部分的 demo 示例。
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+$ cd learn-angular4.0/learn-component
+```
 
-## Running unit tests
+- 安装依赖包
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+$ npm install
+```
 
-## Running end-to-end tests
+如安装速度过慢，可设置淘宝镜像：`$ npm config set registry https://registry.npm.taobao.org`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+- 启动项目
 
-## Further help
+```
+$ ng server
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+如端口号被占用，可设置其它端口： `$ ng server --port 4201`
+
+## 页面展示
+
+![首页](./src/assets/images/page1.png)
