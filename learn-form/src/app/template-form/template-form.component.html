@@ -1,0 +1,10 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <div>用户名：<input type="text" ngModel name="userName"></div>
+  <!--myForm.control.get('username').valid-->
+  <div>手机号：<input type="number"  ngModel name="mobile"></div>
+  <div ngModelGroup="passWordsGroup">
+    <div>密码：<input type="password" ngModel name="password"></div>
+    <div>确认密码：<input type="password" ngModel name="confrimPassword"></div>
+  </div>
+  <button type="submit">注册</button>
+</form>

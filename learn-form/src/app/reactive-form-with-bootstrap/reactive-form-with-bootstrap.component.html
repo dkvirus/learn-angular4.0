@@ -1,0 +1,36 @@
+<form [formGroup]="formModel" (submit)="onSubmit()">
+  <div class="form-group" [class.has-success]="formModel.get('username').valid"><label class="control-label" for="userName">用户名</label><input class="form-control" type="text" formControlName="username" id="userName">
+    <div [hidden]="formModel.get('username').valid || formModel.get('username').untouched">
+      <div class="alert alert-danger" [hidden]="!formModel.hasError('required','username')">
+        用户名是必填项
+      </div>
+      <div class="alert alert-danger" [hidden]="!formModel.hasError('minlength','username')">
+        用户名最小长度是6
+      </div>
+    </div>
+  </div>
+  <div class="form-group" [class.has-success]="formModel.get('mobile').valid"><label class="control-label" for="mobile">手机号</label><input class="form-control" type="number" formControlName="mobile" id="mobile">
+    <div [hidden]="formModel.get('mobile').valid || formModel.get('mobile').pristine">
+      <div class="alert alert-danger" [hidden]="!formModel.hasError('mobile','mobile')">
+        请输入正确的手机号
+      </div>
+    </div>
+  </div>
+  <div formGroupName="passwordsGroup" [class.has-success]="formModel.get('passwordsGroup').valid">
+    <div class="form-group"><label class="control-label" for="password">密码</label><input class="form-control" type="password" formControlName="password" id="password">
+      <div [hidden]="formModel.get(['passwordsGroup','password']).valid">
+        <div class="alert alert-danger" [hidden]="!formModel.hasError('minlength',['passwordsGroup','password'])">
+          密码最小长度为6位
+        </div>
+      </div>
+    </div>
+    <div class="form-group"><label class="control-label" for="confirmPassword">确认密码</label><input class="form-control" type="password" formControlName="confirmPassword" id="confirmPassword">
+      <div class="alert alert-danger" [hidden]="!formModel.hasError('equal','passwordsGroup')">
+        {{ formModel.getError('equal','passwordsGroup')?.pdesc }}
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!formModel.valid">注册</button>
+  <button type="reset" (click)="revert()"
+          [disabled]="formModel.pristine" class="btn btn-danger">重置</button>
+</form>
