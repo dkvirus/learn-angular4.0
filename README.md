@@ -46,4 +46,8 @@ learn-angular 4.0 下每个子目录都是一个独立的工程，根据需要�
 - [第六节：模板 —— learn-template](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-template)  
 - [第七节：指令 —— learn-directive](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-directive)  
 - [第八节：依赖注入 —— learn-di](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-di)  
+- [第九节：表单 —— learn-form](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-form)  
+- [第十节：服务于Rxjs learn-rxjs](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-rxjs)  
+- [第十一节：测试 —— learn-test](https://github.com/dkvirus/learn-angular4.0/tree/master/learn-test)  
+- [第十二节：实战](https://github.com/dkvirus/learn-angular4.0/tree/master/%E5%AE%9E%E6%88%98)  
   
